@@ -1,0 +1,33 @@
+TODO:
+=====
+* automatic creation of instruments database file as postinst script in
+  case such a file does not exist yet
+  (linuxsampler --create-instruments-db)
+* deletion of instruments database file in case package was requested to
+  be remove with --purge
+
+###########################################################################
+
+# commands used to package linuxsampler
+MINORVERSION=cvs20050602
+cd ~/debian/debRelease/linuxsampler
+rm -rf linuxsampler*
+cvs -z3 -d:pserver:anonymous@cvs.linuxsampler.org:/var/cvs/linuxsampler co linuxsampler
+find . -name 'CVS' | xargs rm -rf
+tar zcpf linuxsampler-0.3.$MINORVERSION.tar.gz linuxsampler
+cp linuxsampler-0.3.$MINORVERSION.tar.gz /tmp
+mv linuxsampler linuxsampler-0.3.$MINORVERSION
+rm -r linuxsampler-0.3.$MINORVERSION/debian
+cp -a debian linuxsampler-0.3.$MINORVERSION
+rm linuxsampler-0.3.$MINORVERSION/debian/*~
+cd linuxsampler-0.3.$MINORVERSION
+
+#apply http://lists.debian.org/debian-devel/1998/02/msg01322.html
+
+dh_make -e flatmax@Matt.Flax -f ../linuxsampler-0.3.$MINORVERSION.tar.gz
+s
+
+dpkg-buildpackage -rfakeroot
+cd ..
+lintian -i linuxsampler_0.3.$MINORVERSION-1_i386.changes
+linda -i linuxsampler_0.3.$MINORVERSION-1_i386.changes

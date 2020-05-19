@@ -1,0 +1,5 @@
+/etc/ld.so.conf.d/linuxsampler*.conf
+debian/tmp/usr/lib/linuxsampler/lib*.so.* usr/lib/linuxsampler
+debian/tmp/usr/lib/linuxsampler/plugins usr/lib/linuxsampler
+debian/tmp/usr/lib/dssi/* usr/lib/dssi
+debian/tmp/usr/lib/lv2/linuxsampler* usr/lib/lv2

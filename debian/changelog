@@ -1,0 +1,119 @@
+linuxsampler (2.1.1) unstable; urgency=low
+
+  * New release.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Sat, 27 Jul 2019 13:04:26 +0200
+
+linuxsampler (2.1.0-1) unstable; urgency=low
+
+  * New release.
+  * liblinuxsampler shared library (liblinuxsampler.so) is now at
+    version 5.0.0.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Sat, 25 Nov 2017 18:06:36 +0100
+
+linuxsampler (2.0.0-1+svn76) unreleased; urgency=low
+
+  * Added build dependency to libsqlite3-dev for building linuxsampler
+    with instruments DB support.
+  * Added config file /etc/ld.so.conf.d/linuxsampler.conf instead of fiddling
+    with /etc/ld.so.conf directly with postinst and postrm scripts before.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Fri, 13 Oct 2017 18:08:56 +0200
+
+linuxsampler (2.0.0-1+svn75) unreleased; urgency=low
+
+  * Fixed packaging error about invalid "Source-Version" substitution
+    variable.
+  * Raised Debian compatibility level to Debian 9 "Stretch".
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Sat, 07 Oct 2017 18:35:17 +0200
+
+linuxsampler (2.0.0-1+svn1) unreleased; urgency=low
+
+  * Require libgig version >= 4.0.0 as build dependency.
+  * Require libasound2-dev or libjack-dev as build dependency.
+  * Require dssi-dev as build dependency.
+  * Require lv2-dev as build dependency.
+  * Suggest qsampler as optional installation.
+  * Suggest gigedit as optional installation.
+  * Mention QSampler and JSampler/Fantasia in package description.
+  * Removed unnecessary dependency to libuuid (originated by libgig's usage
+    of it).
+  * Assigned linuxsampler-devel@lists.sourceforge.net as maintainer of
+    this package.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Wed, 06 Apr 2016 19:55:03 +0200
+
+linuxsampler (2.0.0-1) unstable; urgency=low
+
+  * New release.
+  * liblinuxsampler shared library (liblinuxsampler.so) is now at
+    version 4.0.0.
+  * Script for building from SVN is now Makefile.svn (Makefile.cvs still
+    exists but is deprecated).
+  * Updated to Debian compatibility level 7.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Wed, 15 Jul 2015 10:29:57 +0200
+
+linuxsampler (1.0.0-1) unstable; urgency=low
+
+  * New release.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Fri, 31 Jul 2009 09:10:43 +0200
+
+linuxsampler (0.5.1-1) unstable; urgency=low
+
+  * New release.
+  * DSSI and LV2 plugin binaries of the sampler now included with
+    liblinuxsampler package.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Fri, 27 Mar 2009 11:06:01 +0100
+
+linuxsampler (0.5.0-1) unstable; urgency=low
+
+  * fixed debian rules file for working with official release tarballs as
+    well (expected a Makefile.cvs file)
+  * don't strip binary (to allow debugging)
+  * abort packaging build process when Makefile.cvs failed
+    (only relevant to CVS versions of LinuxSampler)
+  * new release
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Mon, 15 Oct 2007 00:28:03 +0200
+
+linuxsampler (0.4.0-1) unstable; urgency=low
+
+  * Updated packaging files for the library nature of LinuxSampler.
+  * Automatically generate Doxygen API documentation.
+  * Include NEWS file on installation.
+  * Include config.h on installation of liblinuxsampler-dev package.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Fri, 24 Nov 2006 18:28:51 +0100
+
+linuxsampler (0.3.3-1) unstable; urgency=low
+
+  * New release.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Fri, 15 Jul 2005 16:24:20 +0200
+
+linuxsampler (0.3.2-1) unstable; urgency=low
+
+  * New release.
+
+ -- Christian Schoenebeck <cuse@users.sourceforge.net>  Fri, 24 Jun 2005 00:29:51 +0200
+
+linuxsampler (0.3.cvs20050602-1) unstable; urgency=low
+
+  * Fixed original make problems stopping multiport builds.
+  * fixed other man and depends issues (Closes: #311431)
+
+ -- Matt Flax <flatmax@pgb.unsw.edu.au>  Thu,  2 Jun 2005 17:55:50 +1000
+
+linuxsampler (0.3.cvs20050531-1) unstable; urgency=low
+
+  * Fixed libtool error by applying :
+    http://lists.debian.org/debian-devel/1998/02/msg01322.html
+  * Fixed debian dir. for packaging (Closes: #279933)
+  * Initial Release (by Cristian S.).
+
+ -- Matt Flax <flatmax@pgb.unsw.edu.au>  Mon, 21 Mar 2005 23:57:39 +1100

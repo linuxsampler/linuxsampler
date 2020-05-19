@@ -1,0 +1,9 @@
+Document: liblinuxsampler
+Title: Debian liblinuxsampler Manual
+Author: Christian Schoenebeck <cuse@users.sourceforge.net>
+Abstract: This is a programming manual for the liblinuxsampler library.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/liblinuxsampler-dev/html/index.html
+Files: /usr/share/doc/liblinuxsampler-dev/html/*.html

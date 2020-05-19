@@ -1,0 +1,19 @@
+This package was debianized by Christian Schoenebeck <cuse@users.sourceforge.net> on
+Sat, 12 Feb 2005 13:33:49 +0100.
+
+The latest sources can be found on https://www.linuxsampler.org
+
+Upstream Authors:
+
+Please see AUTHORS file for a list of those who contributed to LinuxSampler.
+
+Copyright:
+
+    (C) 2003,2004 by Benno Senoner and Christian Schoenebeck
+    (C) 2005-2019 Christian Schoenebeck
+
+LinuxSampler and it's libraries are released under the GNU General Public
+License (GPL) version 2, but with the EXCEPTION that they may NOT be used in
+COMMERCIAL software or hardware products without prior written authorization
+by the authors. On Debian systems, the complete text of the GNU General Public
+License can be found in `/usr/share/common-licenses/GPL'.
