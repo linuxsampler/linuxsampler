@@ -73,6 +73,25 @@ RTMathBase::time_stamp_t RTMathBase::CreateTimeStamp() {
     return t;
     #elif defined(__APPLE__)
     return (time_stamp_t) mach_absolute_time();
+    /* This code is taken from stackoverflow, it's original source is probably some 
+     * linux kernel code and very likely to be GPLv2 code.
+     *
+     * 	https://stackoverflow.com/questions/40454157/is-there-an-equivalent-instruction-to-rdtsc-in-arm
+     */
+    #elif defined(__aarch64__)
+    uint64_t val;
+
+    /*
+     * According to ARM DDI 0487F.c, from Armv8.0 to Armv8.5 inclusive, the
+     * system counter is at least 56 bits wide; from Armv8.6, the counter
+     * must be 64 bits wide.  So the system counter could be less than 64
+     * bits wide and it is attributed with the flag 'cap_user_time_short'
+     * is true.
+     */
+    asm volatile("mrs %0, cntvct_el0" : "=r" (val));
+
+    return val;
+    /* End of the stackoverflow section */
     #else // we don't want to use a slow generic solution
     #  error "Sorry, LinuxSampler lacks time stamp code for your system."
     #  error "Please report this error and the CPU you are using to the LinuxSampler developers mailing list!"

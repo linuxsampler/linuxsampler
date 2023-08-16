@@ -1,0 +1,7 @@
+The files
+
+	src/common/atomic.h 
+and 
+	src/common/RTMath.cpp
+
+contain code that is subject to GPLv2. This may be at odds with the 'commercial exception' policy in the linuxsampler altered GPL version. On the other hand, I'm quite positive that I'm not the first one to introduce GPLv2-licensed code to the codebase of linuxssampler (as atomic.h appears to already contain code from the linux kernel).
